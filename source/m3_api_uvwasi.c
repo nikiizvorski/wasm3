@@ -24,8 +24,8 @@
 extern char** environ;
 #endif
 
-static m3_wasi_context_t* wasi_context;
-static uvwasi_t uvwasi;
+m3_wasi_context_t* wasi_context;
+uvwasi_t uvwasi;
 
 typedef struct wasi_iovec_t
 {
@@ -1148,8 +1148,6 @@ M3Result  m3_LinkWASIWithOptions  (IM3Module module, uvwasi_options_t init_optio
             return "uvwasi_init failed";
         }
     }
-
-    printf("Niki hijacked the environment");
 
     static const char* namespaces[2] = { "wasi_unstable", "wasi_snapshot_preview1" };
 
