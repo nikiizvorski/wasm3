@@ -819,7 +819,7 @@ m3ApiRawFunction(m3_wasi_generic_fd_read)
 
     ret = uvwasi_fd_read(&uvwasi, fd, iovs, iovs_len, &num_read);
 
-    WASI_TRACE("fd:%d | nread:%d", fd, num_read);
+    //WASI_TRACE("fd:%d | nread:%d", fd, num_read);
 
     m3ApiWriteMem32(nread, num_read);
     m3ApiReturn(ret);
@@ -854,7 +854,7 @@ m3ApiRawFunction(m3_wasi_generic_fd_write)
 
     ret = uvwasi_fd_write(&uvwasi, fd, iovs, iovs_len, &num_written);
 
-    WASI_TRACE("fd:%d | nwritten:%d", fd, num_written);
+    //WASI_TRACE("fd:%d | nwritten:%d", fd, num_written);
 
     m3ApiWriteMem32(nwritten, num_written);
     m3ApiReturn(ret);
@@ -890,7 +890,7 @@ m3ApiRawFunction(m3_wasi_generic_fd_pwrite)
 
     ret = uvwasi_fd_pwrite(&uvwasi, fd, iovs, iovs_len, offset, &num_written);
 
-    WASI_TRACE("fd:%d | nwritten:%d", fd, num_written);
+    //WASI_TRACE("fd:%d | nwritten:%d", fd, num_written);
 
     m3ApiWriteMem32(nwritten, num_written);
     m3ApiReturn(ret);
