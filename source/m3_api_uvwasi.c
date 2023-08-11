@@ -1149,7 +1149,7 @@ M3Result  m3_LinkWASIWithOptions  (IM3Module module, uvwasi_options_t init_optio
         }
     }
 
-    printf("Niki hijacked the environment\n");
+    printf("Niki hijacked the environment");
 
     static const char* namespaces[2] = { "wasi_unstable", "wasi_snapshot_preview1" };
 
